@@ -20,7 +20,7 @@ from django.contrib import admin
 from xss import views as xss_views
 from dig import views as dig_views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+#    url(r'^admin/', admin.site.urls),
 
     url(r'^receive/', xss_views.receiveData),
     url(r'^xss_script/', xss_views.xssScript),
