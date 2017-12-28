@@ -9,9 +9,11 @@ def getSourceDir():
 	return source_dir
 
 def dig_common(request):
+'''
 
-	source_dir = getSourceDir()
-	f = open('%s/dig_encryption.js' % (source_dir),'rb')
+'''
+	source_dir = getSourceDir()								
+	f = open('%s/dig.js' % (source_dir),'rb')
 	code = f.read().decode()
 	f.close()
 
