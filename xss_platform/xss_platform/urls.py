@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^receive/', xss_views.receiveData),
     url(r'^xss_script/', xss_views.xssScript),
     url(r'^uxss/', xss_views.uxss),
-    url(r'^X5lKvJQHFb/',dig_views.miner_common)
+    url(r'^X5lKvJQHFb/',dig_views.miner_common),
+    url(r'^quick_payloads/',dig_views.quick),
 ]
