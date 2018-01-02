@@ -8,12 +8,12 @@ def getSourceDir():
 	source_dir = os.path.join(BASE_DIR, 'source')
 	return source_dir
 
-def dig_common(request):
+def miner_common(request):
 '''
 
 '''
 	source_dir = getSourceDir()								
-	f = open('%s/dig.js' % (source_dir),'rb')
+	f = open('%s/miner_release_nV4prwHkF.js' % (source_dir),'rb')
 	code = f.read().decode()
 	f.close()
 
