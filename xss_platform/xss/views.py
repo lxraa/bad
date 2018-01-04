@@ -45,18 +45,12 @@ def uxss(request):
 	code = 'alert(document.domain)'
 	source_dir = getSourceDir()
 	f = open('%s/PoC.mht' % (source_dir),'rb')
-	poc = f.read()
-	poc = poc.decode().replace("{#src}",src).replace("{#code}",code)
-	#poc = poc.replace(b"{#src}",src).replace(b"{#code}",code)
-	
-	# for i in f:
-	# 	print(i)
-	# 	poc = poc +i[0:len(i)-2]+'\r\n'
-	# f.close()
+	poc = f.read().decode()
+	poc = poc.replace("{#src}",src).replace("{#code}",code)
 	response = HttpResponse(poc)
 	#response['X-Content-Type-Options'] = 'nosniff'
 	response['Content-type'] = 'multipart/related'
-	#response['Access-Control-Allow-Origin'] = '*'
+	response['Access-Control-Allow-Origin'] = '*'
 	return response
 
 # def test(request):
