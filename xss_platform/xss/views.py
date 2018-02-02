@@ -53,6 +53,15 @@ def uxss(request):
 	response['Access-Control-Allow-Origin'] = '*'
 	return response
 
+def zimbra(request):
+	f = open('%s/zimbra.js' %(getSourceDir()),'rb')
+	code = f.read()
+	f.close()
+	response = HttpResponse(code)
+	response['Access-Control-Allow-Origin'] = '*'
+	response['Content-type'] = 'text/javascript'
+	return response
+	
 # def test(request):
 # 	# source_dir = getSourceDir()
 # 	# data = open('%s/data.html' % (source_dir),'rb').read()
