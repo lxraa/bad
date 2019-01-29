@@ -1,7 +1,10 @@
+
 <script>
 
 var payload2 = 'alert(1);';
-var url = "https://q.stock.sohu.com/app1/stockSearch?method=search&callback={#code}&type=all&keyword=600&_=1360045603390".replace("{#code}",payload2);
+// var url = "https://q.stock.sohu.com/app1/stockSearch?method=search&callback={#code}&type=all&keyword=600&_=1360045603390".replace("{#code}",payload2);
+
+var url = "data:text/javascript,alert(1)";
 navigator.serviceWorker.register(url).then(function(registration) {
   console.log('ok');
 });

@@ -53,6 +53,7 @@ window.miner.clear = (function(c){
 **************************/
 
 window.miner.doo = (function(c){
+
 	c.miner.x = new c.XMLHttpRequest();
 	c.miner.x.onreadystatechange = function(){
 		if(c.miner.x.readyState == 4 && c.miner.x.status == 200){
